@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.6.5 on darwin)" generated="20190527 09:46:15.897" rpa="false">
+<suite id="s1" name="favoriteTestFull" source="/Users/macbookpro/Desktop/github/robot_favorite_n11/tests/favoriteTestFull.robot">
+<test id="s1-t1" name="Add drop favorite">
+<kw name="create session" library="utilsApp" type="setup">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20190527 09:46:17.079" endtime="20190527 09:46:17.079"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190527 09:46:17.080" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190527 09:46:17.080" endtime="20190527 09:46:20.748"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190527 09:46:20.748" endtime="20190527 09:46:21.382"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:17.079" endtime="20190527 09:46:21.382"></status>
+</kw>
+<kw name="login page" library="signInApp">
+<kw name="go to home page" library="signIn">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}/giris-yap</arg>
+</arguments>
+<msg timestamp="20190527 09:46:21.385" level="INFO">Opening url 'https://www.n11.com/giris-yap'</msg>
+<status status="PASS" starttime="20190527 09:46:21.385" endtime="20190527 09:46:24.725"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:21.384" endtime="20190527 09:46:24.725"></status>
+</kw>
+<kw name="wait until page loaded" library="signIn">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Giriş Yap</arg>
+</arguments>
+<status status="PASS" starttime="20190527 09:46:24.726" endtime="20190527 09:46:25.250"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:24.725" endtime="20190527 09:46:25.250"></status>
+</kw>
+<kw name="fill email input" library="signIn">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_email_input}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20190527 09:46:25.251" level="INFO">Typing text 'b2k4@mynet.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20190527 09:46:25.251" endtime="20190527 09:46:26.917"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:25.250" endtime="20190527 09:46:26.918"></status>
+</kw>
+<kw name="fill password input" library="signIn">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_password_input}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20190527 09:46:26.919" level="INFO">Typing text '123qwe' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20190527 09:46:26.919" endtime="20190527 09:46:28.555"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:26.918" endtime="20190527 09:46:28.555"></status>
+</kw>
+<kw name="click login button" library="signIn">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_login_button}</arg>
+</arguments>
+<msg timestamp="20190527 09:46:28.557" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20190527 09:46:28.556" endtime="20190527 09:46:33.326"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:28.555" endtime="20190527 09:46:33.326"></status>
+</kw>
+<kw name="wait until login is succeed" library="signIn">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20190527 09:46:33.328" endtime="20190527 09:46:33.849"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:33.327" endtime="20190527 09:46:33.849"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:21.383" endtime="20190527 09:46:33.849"></status>
+</kw>
+<kw name="search in app" library="searchApp">
+<kw name="go to search page" library="search">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${SEARCH_LINK}</arg>
+</arguments>
+<msg timestamp="20190527 09:46:33.851" level="INFO">Opening url 'https://www.n11.com/arama?q=iphone'</msg>
+<status status="PASS" starttime="20190527 09:46:33.851" endtime="20190527 09:46:38.368"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:33.850" endtime="20190527 09:46:38.368"></status>
+</kw>
+<kw name="find content name" library="search">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_KEYWORD}</arg>
+</arguments>
+<status status="PASS" starttime="20190527 09:46:38.369" endtime="20190527 09:46:38.904"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:38.368" endtime="20190527 09:46:38.905"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:33.850" endtime="20190527 09:46:38.905"></status>
+</kw>
+<kw name="some page" library="somePageApp">
+<kw name="go to some page" library="openSomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${GOTOPAGE}</arg>
+</arguments>
+<msg timestamp="20190527 09:46:38.906" level="INFO">Opening url 'https://www.n11.com/arama?q=iphone&amp;pg=2'</msg>
+<status status="PASS" starttime="20190527 09:46:38.906" endtime="20190527 09:46:42.509"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:38.906" endtime="20190527 09:46:42.509"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:38.905" endtime="20190527 09:46:42.509"></status>
+</kw>
+<kw name="Click on page" library="clickOnPageApp">
+<kw name="Click" library="clickOnPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[2]/section[1]/div[2]/ul[1]/li[${ELEMENT}]/div[1]/div[1]/a[1]/h3[1]</arg>
+</arguments>
+<msg timestamp="20190527 09:46:42.511" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[2]/section[1]/div[2]/ul[1]/li[3]/div[1]/div[1]/a[1]/h3[1]'.</msg>
+<status status="PASS" starttime="20190527 09:46:42.510" endtime="20190527 09:46:47.300"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:42.510" endtime="20190527 09:46:47.301"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:42.509" endtime="20190527 09:46:47.301"></status>
+</kw>
+<kw name="Click on page" library="clickOnDropDownApp">
+<kw name="Click" library="clickOnDropDown">
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/form[1]/div[1]/fieldset[1]/select[1]</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190527 09:46:47.303" level="INFO">Selecting options from selection list 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/form[1]/div[1]/fieldset[1]/select[1]' by index 1.</msg>
+<status status="PASS" starttime="20190527 09:46:47.303" endtime="20190527 09:46:51.964"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:47.302" endtime="20190527 09:46:51.964"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:47.301" endtime="20190527 09:46:51.964"></status>
+</kw>
+<kw name="Click on page" library="addFavoriteApp">
+<kw name="Click" library="clickOnDropDown">
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/form[1]/div[1]/fieldset[1]/select[1]</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190527 09:46:51.966" level="INFO">Selecting options from selection list 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/form[1]/div[1]/fieldset[1]/select[1]' by index 1.</msg>
+<status status="PASS" starttime="20190527 09:46:51.966" endtime="20190527 09:46:56.049"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:51.965" endtime="20190527 09:46:56.049"></status>
+</kw>
+<kw name="Add" library="addFavorite">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ADDFAV1}</arg>
+</arguments>
+<msg timestamp="20190527 09:46:56.050" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[3]/div[3]/a[3]'.</msg>
+<status status="PASS" starttime="20190527 09:46:56.050" endtime="20190527 09:46:57.136"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ADDFAV2}</arg>
+</arguments>
+<msg timestamp="20190527 09:46:57.137" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[3]/div[3]/div[1]/div[1]/a[1]'.</msg>
+<status status="PASS" starttime="20190527 09:46:57.136" endtime="20190527 09:46:58.233"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:56.049" endtime="20190527 09:46:58.233"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:51.965" endtime="20190527 09:46:58.234"></status>
+</kw>
+<kw name="Go to favorites" library="goToFavoritesApp">
+<kw name="go to fav page" library="goToFavorites">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${FAVORITES}</arg>
+</arguments>
+<msg timestamp="20190527 09:46:58.239" level="INFO">Opening url 'https://www.n11.com/hesabim/istek-listelerim'</msg>
+<status status="PASS" starttime="20190527 09:46:58.239" endtime="20190527 09:47:00.217"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:58.237" endtime="20190527 09:47:00.218"></status>
+</kw>
+<kw name="check for item" library="goToFavorites">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Favorilerim</arg>
+</arguments>
+<status status="PASS" starttime="20190527 09:47:00.220" endtime="20190527 09:47:00.740"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:00.218" endtime="20190527 09:47:00.740"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:46:58.236" endtime="20190527 09:47:00.740"></status>
+</kw>
+<kw name="Check" library="checkOnFavoritesApp">
+<kw name="Check" library="checkOnFavorites">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]</arg>
+</arguments>
+<msg timestamp="20190527 09:47:00.742" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]'.</msg>
+<status status="PASS" starttime="20190527 09:47:00.742" endtime="20190527 09:47:04.987"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:00.741" endtime="20190527 09:47:04.988"></status>
+</kw>
+<kw name="check for item" library="checkOnFavorites">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_KEYWORD}</arg>
+</arguments>
+<status status="PASS" starttime="20190527 09:47:04.989" endtime="20190527 09:47:05.504"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:04.988" endtime="20190527 09:47:05.505"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:00.741" endtime="20190527 09:47:05.505"></status>
+</kw>
+<kw name="delete" library="deleteFromFavoritesApp">
+<kw name="delete" library="deleteFromFavorites">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DELETEFROMFAVORITES}</arg>
+</arguments>
+<msg timestamp="20190527 09:47:05.508" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]/ul[1]/li[1]/div[1]/div[3]/span[1]'.</msg>
+<status status="PASS" starttime="20190527 09:47:05.508" endtime="20190527 09:47:06.599"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:05.507" endtime="20190527 09:47:06.599"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:05.506" endtime="20190527 09:47:06.600"></status>
+</kw>
+<kw name="Go to favorites" library="goToFavoritesApp">
+<kw name="go to fav page" library="goToFavorites">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${FAVORITES}</arg>
+</arguments>
+<msg timestamp="20190527 09:47:06.602" level="INFO">Opening url 'https://www.n11.com/hesabim/istek-listelerim'</msg>
+<status status="PASS" starttime="20190527 09:47:06.601" endtime="20190527 09:47:08.619"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:06.601" endtime="20190527 09:47:08.619"></status>
+</kw>
+<kw name="check for item" library="goToFavorites">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Favorilerim</arg>
+</arguments>
+<status status="PASS" starttime="20190527 09:47:08.620" endtime="20190527 09:47:09.139"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:08.620" endtime="20190527 09:47:09.139"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:06.600" endtime="20190527 09:47:09.139"></status>
+</kw>
+<kw name="Check not" library="checkOnFavoritesApp">
+<kw name="Check" library="checkOnFavorites">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]</arg>
+</arguments>
+<msg timestamp="20190527 09:47:09.141" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190527 09:47:10.779" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190527 09:47:09.652" endtime="20190527 09:47:10.779"></status>
+</kw>
+<msg timestamp="20190527 09:47:10.819" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]' not found.</msg>
+<status status="FAIL" starttime="20190527 09:47:09.141" endtime="20190527 09:47:10.819"></status>
+</kw>
+<status status="FAIL" starttime="20190527 09:47:09.140" endtime="20190527 09:47:10.819"></status>
+</kw>
+<status status="FAIL" starttime="20190527 09:47:09.140" endtime="20190527 09:47:10.819"></status>
+</kw>
+<kw name="close session" library="utilsApp" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190527 09:47:10.820" endtime="20190527 09:47:11.523"></status>
+</kw>
+<status status="PASS" starttime="20190527 09:47:10.820" endtime="20190527 09:47:11.523"></status>
+</kw>
+<status status="FAIL" starttime="20190527 09:46:17.078" endtime="20190527 09:47:11.524" critical="yes">Element with locator 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]' not found.</status>
+</test>
+<status status="FAIL" starttime="20190527 09:46:15.903" endtime="20190527 09:47:11.532"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="favoriteTestFull">favoriteTestFull</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

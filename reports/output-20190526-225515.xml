@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.6.5 on darwin)" generated="20190526 22:55:15.474" rpa="false">
+<suite id="s1" name="Tests" source="/Users/macbookpro/Desktop/github/robot_favorite_n11/tests">
+<suite id="s1-s1" name="favoriteTestFull" source="/Users/macbookpro/Desktop/github/robot_favorite_n11/tests/favoriteTestFull.robot">
+<test id="s1-s1-t1" name="Add drop favorite">
+<kw name="create session" library="utilsApp" type="setup">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:55:17.057" endtime="20190526 22:55:17.058"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190526 22:55:17.058" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190526 22:55:17.058" endtime="20190526 22:55:20.678"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190526 22:55:20.679" endtime="20190526 22:55:21.328"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:17.057" endtime="20190526 22:55:21.328"></status>
+</kw>
+<kw name="login page" library="signInApp">
+<kw name="go to home page" library="signIn">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}/giris-yap</arg>
+</arguments>
+<msg timestamp="20190526 22:55:21.330" level="INFO">Opening url 'https://www.n11.com/giris-yap'</msg>
+<status status="PASS" starttime="20190526 22:55:21.330" endtime="20190526 22:55:24.598"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:21.329" endtime="20190526 22:55:24.600"></status>
+</kw>
+<kw name="wait until page loaded" library="signIn">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Giriş Yap</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:55:24.601" endtime="20190526 22:55:25.129"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:24.600" endtime="20190526 22:55:25.130"></status>
+</kw>
+<kw name="fill email input" library="signIn">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_email_input}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20190526 22:55:25.131" level="INFO">Typing text 'yusufsariyildiz91@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20190526 22:55:25.131" endtime="20190526 22:55:26.858"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:25.130" endtime="20190526 22:55:26.858"></status>
+</kw>
+<kw name="fill password input" library="signIn">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_password_input}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20190526 22:55:26.860" level="INFO">Typing text '123qwe' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20190526 22:55:26.860" endtime="20190526 22:55:28.511"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:26.859" endtime="20190526 22:55:28.512"></status>
+</kw>
+<kw name="click login button" library="signIn">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_login_button}</arg>
+</arguments>
+<msg timestamp="20190526 22:55:28.513" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20190526 22:55:28.512" endtime="20190526 22:55:32.533"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:28.512" endtime="20190526 22:55:32.533"></status>
+</kw>
+<kw name="wait until login is succeed" library="signIn">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:55:32.534" endtime="20190526 22:55:33.058"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:32.534" endtime="20190526 22:55:33.059"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:21.329" endtime="20190526 22:55:33.059"></status>
+</kw>
+<kw name="search in app" library="searchApp">
+<kw name="go to search page" library="search">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${SEARCH_LINK}</arg>
+</arguments>
+<msg timestamp="20190526 22:55:33.061" level="INFO">Opening url 'https://www.n11.com/arama?q=iphone'</msg>
+<status status="PASS" starttime="20190526 22:55:33.061" endtime="20190526 22:55:36.944"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:33.060" endtime="20190526 22:55:36.944"></status>
+</kw>
+<kw name="find content name" library="search">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_KEYWORD}</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:55:36.945" endtime="20190526 22:55:37.479"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:36.944" endtime="20190526 22:55:37.479"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:33.059" endtime="20190526 22:55:37.479"></status>
+</kw>
+<kw name="some page" library="somePageApp">
+<kw name="go to some page" library="openSomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${GOTOPAGE}</arg>
+</arguments>
+<msg timestamp="20190526 22:55:37.481" level="INFO">Opening url 'https://www.n11.com/arama?q=iphone&amp;pg=2'</msg>
+<status status="PASS" starttime="20190526 22:55:37.481" endtime="20190526 22:55:41.250"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:37.480" endtime="20190526 22:55:41.251"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:37.480" endtime="20190526 22:55:41.251"></status>
+</kw>
+<kw name="Click on page" library="clickOnPageApp">
+<kw name="Click" library="clickOnPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[2]/section[1]/div[2]/ul[1]/li[${ELEMENT}]/div[1]/div[1]/a[1]/h3[1]</arg>
+</arguments>
+<msg timestamp="20190526 22:55:41.252" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[2]/section[1]/div[2]/ul[1]/li[3]/div[1]/div[1]/a[1]/h3[1]'.</msg>
+<status status="PASS" starttime="20190526 22:55:41.252" endtime="20190526 22:55:45.040"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:41.252" endtime="20190526 22:55:45.040"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:41.251" endtime="20190526 22:55:45.040"></status>
+</kw>
+<kw name="Click on page" library="clickOnDropDownApp">
+<kw name="Click" library="clickOnDropDown">
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/form[1]/div[1]/fieldset[1]/select[1]</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190526 22:55:45.043" level="INFO">Selecting options from selection list 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/form[1]/div[1]/fieldset[1]/select[1]' by index 1.</msg>
+<status status="PASS" starttime="20190526 22:55:45.042" endtime="20190526 22:55:49.689"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:45.042" endtime="20190526 22:55:49.689"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:45.041" endtime="20190526 22:55:49.689"></status>
+</kw>
+<kw name="Click on page" library="addFavoriteApp">
+<kw name="Click" library="clickOnDropDown">
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/form[1]/div[1]/fieldset[1]/select[1]</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190526 22:55:49.692" level="INFO">Selecting options from selection list 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/form[1]/div[1]/fieldset[1]/select[1]' by index 1.</msg>
+<status status="PASS" starttime="20190526 22:55:49.691" endtime="20190526 22:55:53.774"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:49.691" endtime="20190526 22:55:53.774"></status>
+</kw>
+<kw name="Add" library="addFavorite">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ADDFAV1}</arg>
+</arguments>
+<msg timestamp="20190526 22:55:53.775" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[3]/div[3]/a[3]'.</msg>
+<status status="PASS" starttime="20190526 22:55:53.775" endtime="20190526 22:55:54.849"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ADDFAV2}</arg>
+</arguments>
+<msg timestamp="20190526 22:55:54.850" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[3]/div[3]/div[1]/div[1]/a[1]'.</msg>
+<status status="PASS" starttime="20190526 22:55:54.850" endtime="20190526 22:55:55.965"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:53.774" endtime="20190526 22:55:55.965"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:49.690" endtime="20190526 22:55:55.965"></status>
+</kw>
+<kw name="Go to favorites" library="goToFavoritesApp">
+<kw name="go to fav page" library="goToFavorites">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${FAVORITES}</arg>
+</arguments>
+<msg timestamp="20190526 22:55:55.967" level="INFO">Opening url 'https://www.n11.com/hesabim/istek-listelerim'</msg>
+<status status="PASS" starttime="20190526 22:55:55.967" endtime="20190526 22:55:57.466"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:55.966" endtime="20190526 22:55:57.466"></status>
+</kw>
+<kw name="check for item" library="goToFavorites">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Favorilerim</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:55:57.467" endtime="20190526 22:55:57.985"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:57.467" endtime="20190526 22:55:57.985"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:55.966" endtime="20190526 22:55:57.986"></status>
+</kw>
+<kw name="Check" library="checkOnFavoritesApp">
+<kw name="Check" library="checkOnFavorites">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]</arg>
+</arguments>
+<msg timestamp="20190526 22:55:57.988" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]'.</msg>
+<status status="PASS" starttime="20190526 22:55:57.987" endtime="20190526 22:56:02.515"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:57.987" endtime="20190526 22:56:02.515"></status>
+</kw>
+<kw name="check for item" library="checkOnFavorites">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_KEYWORD}</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:56:02.516" endtime="20190526 22:56:03.036"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:02.515" endtime="20190526 22:56:03.036"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:57.986" endtime="20190526 22:56:03.036"></status>
+</kw>
+<kw name="delete" library="deleteFromFavoritesApp">
+<kw name="delete" library="deleteFromFavorites">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DELETEFROMFAVORITES}</arg>
+</arguments>
+<msg timestamp="20190526 22:56:03.039" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]/ul[1]/li[1]/div[1]/div[3]/span[1]'.</msg>
+<status status="PASS" starttime="20190526 22:56:03.038" endtime="20190526 22:56:04.127"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:03.038" endtime="20190526 22:56:04.129"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:03.037" endtime="20190526 22:56:04.129"></status>
+</kw>
+<kw name="Go to favorites" library="goToFavoritesApp">
+<kw name="go to fav page" library="goToFavorites">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${FAVORITES}</arg>
+</arguments>
+<msg timestamp="20190526 22:56:04.131" level="INFO">Opening url 'https://www.n11.com/hesabim/istek-listelerim'</msg>
+<status status="PASS" starttime="20190526 22:56:04.131" endtime="20190526 22:56:05.705"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:04.130" endtime="20190526 22:56:05.706"></status>
+</kw>
+<kw name="check for item" library="goToFavorites">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Favorilerim</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:56:05.707" endtime="20190526 22:56:06.222"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:05.706" endtime="20190526 22:56:06.222"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:04.130" endtime="20190526 22:56:06.223"></status>
+</kw>
+<kw name="Check not" library="checkOnFavoritesApp">
+<kw name="Check" library="checkOnFavorites">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]</arg>
+</arguments>
+<msg timestamp="20190526 22:56:06.225" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[3]/ul[1]/li[1]/div[1]/ul[1]/li[1]/a[1]/img[1]'.</msg>
+<status status="PASS" starttime="20190526 22:56:06.224" endtime="20190526 22:56:09.365"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:06.224" endtime="20190526 22:56:09.366"></status>
+</kw>
+<kw name="check for not" library="checkOnFavorites">
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from current page.</doc>
+<arguments>
+<arg>${SEARCH_KEYWORD}</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:56:09.367" endtime="20190526 22:56:09.885"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:09.366" endtime="20190526 22:56:09.885"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:06.223" endtime="20190526 22:56:09.885"></status>
+</kw>
+<kw name="logout" library="logoutApp">
+<kw name="logout" library="logout">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGOUT}</arg>
+</arguments>
+<msg timestamp="20190526 22:56:09.888" level="INFO">Opening url 'https://www.n11.com/cikis-yap'</msg>
+<status status="PASS" starttime="20190526 22:56:09.887" endtime="20190526 22:56:12.356"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+</arguments>
+<msg timestamp="20190526 22:56:12.357" level="INFO">Opening url 'https://www.n11.com'</msg>
+<status status="PASS" starttime="20190526 22:56:12.357" endtime="20190526 22:56:14.847"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:09.887" endtime="20190526 22:56:14.847"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:09.886" endtime="20190526 22:56:14.848"></status>
+</kw>
+<kw name="logout check" library="logoutApp">
+<kw name="logout check" library="logout">
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from current page.</doc>
+<arguments>
+<arg>${NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:56:14.849" endtime="20190526 22:56:15.377"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:14.849" endtime="20190526 22:56:15.377"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:14.848" endtime="20190526 22:56:15.377"></status>
+</kw>
+<kw name="close session" library="utilsApp" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190526 22:56:15.379" endtime="20190526 22:56:16.049"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:15.378" endtime="20190526 22:56:16.050"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:55:17.056" endtime="20190526 22:56:16.050" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190526 22:55:15.537" endtime="20190526 22:56:16.054"></status>
+</suite>
+<suite id="s1-s2" name="homePageTest" source="/Users/macbookpro/Desktop/github/robot_favorite_n11/tests/homePageTest.robot">
+<test id="s1-s2-t1" name="Check homepage">
+<kw name="create session" library="utilsApp" type="setup">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:56:16.075" endtime="20190526 22:56:16.075"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190526 22:56:16.076" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190526 22:56:16.075" endtime="20190526 22:56:19.166"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190526 22:56:19.166" endtime="20190526 22:56:19.806"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:16.074" endtime="20190526 22:56:19.806"></status>
+</kw>
+<kw name="go to app" library="homePageApp">
+<kw name="go to home page" library="homePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+</arguments>
+<msg timestamp="20190526 22:56:19.808" level="INFO">Opening url 'https://www.n11.com'</msg>
+<status status="PASS" starttime="20190526 22:56:19.808" endtime="20190526 22:56:24.077"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:19.808" endtime="20190526 22:56:24.077"></status>
+</kw>
+<kw name="wait until page loaded" library="homePage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Kullanım Koşullarımız</arg>
+</arguments>
+<status status="PASS" starttime="20190526 22:56:24.078" endtime="20190526 22:56:24.600"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:24.078" endtime="20190526 22:56:24.600"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:19.807" endtime="20190526 22:56:24.600"></status>
+</kw>
+<kw name="close session" library="utilsApp" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190526 22:56:24.601" endtime="20190526 22:56:25.275"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:24.601" endtime="20190526 22:56:25.275"></status>
+</kw>
+<status status="PASS" starttime="20190526 22:56:16.073" endtime="20190526 22:56:25.275" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190526 22:56:16.056" endtime="20190526 22:56:25.276"></status>
+</suite>
+<status status="PASS" starttime="20190526 22:55:15.480" endtime="20190526 22:56:25.278"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" id="s1-s1" name="favoriteTestFull">Tests.favoriteTestFull</stat>
+<stat pass="1" fail="0" id="s1-s2" name="homePageTest">Tests.homePageTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
